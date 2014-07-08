@@ -4,6 +4,8 @@ def ask_and_get(param)
   #TODO:
   #- Ask the user to write a value for param
   #- Get and return the string inputted by the user
+  puts "What is your #{param}?"
+  return gets.chomp
 end
 
 def name_from_terminal
@@ -11,8 +13,9 @@ def name_from_terminal
   second_name = ask_and_get("middle name")
   last_name = ask_and_get("last name")
 
-  compute_name(first_name, second_name, last_name)
+  return compute_name(first_name, second_name, last_name)
 end
+
 
 full_name = name_from_terminal
 
@@ -20,4 +23,7 @@ full_name = name_from_terminal
 
 # custom_message =
 
+custom_message = "Hi, my name is " + full_name
+
 puts custom_message
+
