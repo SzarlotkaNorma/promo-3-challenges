@@ -53,8 +53,15 @@ def product(array)
 end
 
 def sorted_pairs(array)
+
+  pairs_new = []
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
+  array.each_slice(2) do |pairs|
+    p pairs
+  pairs_new << pairs.sort
+  end
+pairs_new
 end
 
 
