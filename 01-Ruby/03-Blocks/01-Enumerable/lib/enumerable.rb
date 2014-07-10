@@ -26,16 +26,20 @@ end
 def short_words(array, max_length)
   # TODO: Take and array of words, return the array of words not exceeding max_length characters
   #       You should use Enumerable#reject
-  max_length
 
   array.reject do |word|
     word.length > max_length
   end
 end
 
+
+
 def first_under(array, limit)
   # TODO: Return the first number from an array that is less than limit.
   #       You should use Enumerable#find
+  array.find do |num|
+   num < limit
+  end
 end
 
 def add_bang(array)
