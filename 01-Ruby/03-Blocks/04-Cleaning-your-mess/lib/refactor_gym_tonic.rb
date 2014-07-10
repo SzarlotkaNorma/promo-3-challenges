@@ -1,17 +1,14 @@
 # Very dirty code to make some dirty gym...
+# Test if reaching the end of the current exercise, print message in that case
+# At the end reset counter to 0 for the next exercise
+
 def hop_hop_hop(number_of_exercises)
-  for i in (1..number_of_exercises) do 
-    counter = 0
-    until counter == i do
-      print "hop! "
-      counter += 1
-    end
-    unless counter != i # Test if reaching the end of the current exercise.
-      # Prints message in that case    
-      print 'One more time..' + "\n"
-    end  
-    # Reset counter to 0 for the next exercise
-    counter = 0
+
+counter=0
+  while counter < number_of_exercises
+    counter.times {print "hop! "}
+    print "hop! One more time.." + "\n"
+    counter += 1
   end
 end
 
