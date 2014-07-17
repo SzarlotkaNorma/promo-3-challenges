@@ -24,12 +24,12 @@ end
 
 def convert_string_to_symbol(a_string)
   # TODO: return the symbol version of "a_string"
-  "foo".intern
+  a_string.intern
 end
 
 def convert_symbol_to_string(a_symbol)
   # TODO: return the string version of "a_symbol"
-  :foo.to_s
+  a_symbol.to_s
 end
 
 def me
