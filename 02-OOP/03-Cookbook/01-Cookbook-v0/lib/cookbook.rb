@@ -4,7 +4,7 @@ class Cookbook
 
   attr_reader = :recipes
 
-  def initialize
+  def initialize(csv_file)
     @recipes = []
     @filepath = '/home/charlotte/code/SzarlotkaNorma/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/lib/recipes.csv'
     load_csv
@@ -31,7 +31,7 @@ class Cookbook
   end
 
 
-  def delete_recipe(recipe)
+  def remove_recipe(recipe_id)
     @recipes = @recipes.delete(recipe)
    save
   end
@@ -41,3 +41,6 @@ class Cookbook
   end
 
 end
+
+cb = Cookbook.new('recipes.csv')
+p cb
