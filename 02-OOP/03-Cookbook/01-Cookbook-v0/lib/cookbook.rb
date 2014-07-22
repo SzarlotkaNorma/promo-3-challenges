@@ -6,13 +6,13 @@ class Cookbook
 
   def initialize(csv_file)
     @recipes = []
-    @filepath = '/home/charlotte/code/SzarlotkaNorma/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/lib/recipes.csv'
-    load_csv
+Crumpets,Crumpets description
+    @filepath =
   end
 
   def load_csv
     CSV.foreach(@filepath) do |row|
-     @recipes << row
+     @recipes << Recipe.new(row[0], row[1])
     end
   end
 
@@ -31,13 +31,12 @@ class Cookbook
   end
 
 
-  def remove_recipe(recipe_id)
-    @recipes = @recipes.delete(recipe)
-   save
+  def remove_recipe(index)
+    @recipes = @recipes.delete_at(index)
   end
 
-  def return_recipe(index)
-    return @recipes[index]
+  def return_recipe(recipe_id)
+    return @recipes[recipe_id]
   end
 
 end
