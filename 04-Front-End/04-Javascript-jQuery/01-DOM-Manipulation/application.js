@@ -48,10 +48,12 @@ function run_challenges() {
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
+  $('#results-wrapper').css("padding-top", "20px");
 
 
 
   // Ex 10. Remove the "Email:" label from the DOM
+  $('label').remove();
 
 
 
