@@ -39,6 +39,9 @@ function run_challenges() {
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
+  $('tbody tr').each(function(index, element) {
+    sum += parseInt($(element).find('td:last').text());
+  });
 
 
 
